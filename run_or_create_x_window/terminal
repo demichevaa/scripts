@@ -1,0 +1,9 @@
+ID=$(xdotool search --onlyvisible --limit 1 --classname gnome-terminal)
+
+if [ -z "$ID" ]; 
+    then
+        gnome-terminal --hide-menubar --full-screen &
+    else
+        xdotool windowactivate "$ID"
+fi
+

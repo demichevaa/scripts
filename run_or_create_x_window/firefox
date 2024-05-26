@@ -1,0 +1,9 @@
+ID=$(xdotool search --onlyvisible --limit 1 --classname Navigator)
+
+if [ -z "$ID" ]; 
+    then
+        firefox &
+    else
+        xdotool windowactivate "$ID"
+fi
+
